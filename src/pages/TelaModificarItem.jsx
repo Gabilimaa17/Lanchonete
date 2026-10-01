@@ -13,7 +13,9 @@ export default function TelaModificarItem({
 
       <div className={styles["quantity-container"]}>
         <h2 style={{ fontSize: '2rem' }}>{itemParaModificar.name}</h2>
-        <div className={styles["produto-img"]} style={{ fontSize: '8rem', margin: '30px 0' }}>{itemParaModificar.image}</div>
+        <div className={styles["produto-img"]} style={{ fontSize: '8rem', margin: '30px 0' }}>
+          <img src={itemParaModificar.image} alt={itemParaModificar.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+        </div>
 
         <div className={styles["quantity-controls"]}>
           <button className={styles["btn-qty"]} onClick={() => setItemParaModificar({ ...itemParaModificar, quantity: Math.max(1, itemParaModificar.quantity - 1) })}>-</button>

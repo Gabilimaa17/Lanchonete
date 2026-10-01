@@ -1,57 +1,72 @@
-
 .tela-pagamento {
-  height: 100%;
-  background-color: #000;
+  height: 100vh;
+  background: radial-gradient(circle at top, #2a1542 0%, #0d0614 100%);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 40px;
+  padding: 40px 20px;
+  box-sizing: border-box;
   text-align: center;
+  color: #f3e8ff;
 }
 
 .tela-pagamento h2 {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #f3e8ff;
+  margin-bottom: 24px;
+  text-shadow: 0 4px 15px rgba(168, 85, 247, 0.35);
 }
 
 .opcoes-pagamento {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 15px;
-  width: 90%;
+  gap: 16px;
+  width: 100%;
+  max-width: 400px;
   margin-bottom: 20px;
 }
 
 .opcoes-pagamento button {
-  padding: 15px;
+  padding: 18px 12px;
   font-size: 1.1rem;
-  font-weight: bold;
-  background-color: #0b1b3d;
-  color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  font-weight: 600;
+  background: rgba(168, 85, 247, 0.12);
+  color: #ffffff;
+  border: 1px solid rgba(192, 132, 252, 0.3);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
   cursor: pointer;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease;
+}
+
+.opcoes-pagamento button:hover {
+  background: rgba(168, 85, 247, 0.25);
+  border-color: #c084fc;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(168, 85, 247, 0.35);
 }
 
 .opcoes-pagamento button:active {
   transform: scale(0.95);
-  border-color: #999;
 }
 
 .btn-voltar-review {
-  padding: 15px 30px;
-  font-size: 1.2rem;
+  padding: 12px 28px;
+  font-size: 1.1rem;
   font-weight: bold;
-  background-color: #ccc;
-  color: #fff;
-  border: 1px solid #333;
-  border-radius: 4px;
+  background: transparent;
+  color: #d8b4fe;
+  border: 1px solid rgba(192, 132, 252, 0.4);
+  border-radius: 12px;
   cursor: pointer;
-  margin-top: 40px;
+  margin-top: 30px;
+  transition: all 0.2s ease;
 }
 
 .btn-voltar-review:active {
   transform: scale(0.95);
+  background: rgba(168, 85, 247, 0.2);
 }

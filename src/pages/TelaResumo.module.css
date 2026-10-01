@@ -1,43 +1,48 @@
-
 .tela-review {
-  height: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: #000;
+  background: radial-gradient(circle at top, #2a1542 0%, #0d0614 100%);
   position: relative;
   align-items: center;
   padding-top: 40px;
+  box-sizing: border-box;
+  color: #f3e8ff;
 }
 
 .tela-review h2 {
-  font-size: 1.5rem;
-  color: #fff;
+  font-size: 1.6rem;
+  color: #f3e8ff;
   margin-bottom: 20px;
-  font-weight: bold;
+  font-weight: 700;
+  text-shadow: 0 4px 15px rgba(168, 85, 247, 0.35);
 }
 
 .lista-review {
   width: 90%;
+  max-width: 500px;
   flex: 1;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  padding-bottom: 120px;
+  gap: 16px;
+  padding-bottom: 140px;
 }
 
 .nota-fiscal-container {
-  background-color: transparent;
-  border: 1px solid #777;
-  border-radius: 2px;
+  background: rgba(168, 85, 247, 0.1);
+  border: 1px solid rgba(192, 132, 252, 0.25);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .item-review-linha {
   display: flex;
   flex-direction: column;
-  border-bottom: 1px solid #777;
+  border-bottom: 1px solid rgba(192, 132, 252, 0.15);
 }
 
 .item-review-linha:last-child {
@@ -47,61 +52,68 @@
 .item-review-topo {
   display: flex;
   justify-content: space-between;
-  padding: 10px;
-  font-size: 0.9rem;
-  font-weight: bold;
-  color: #fff;
-  border-bottom: 1px dashed #777;
+  padding: 12px 16px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #ffffff;
+  border-bottom: 1px dashed rgba(192, 132, 252, 0.3);
 }
 
 .item-review-acoes {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
-  background-color: #0b1b3d;
+  padding: 10px 16px;
+  background: rgba(13, 6, 20, 0.4);
 }
 
 .btn-remover {
-  background-color: #c00;
-  color: white;
-  border: 1px solid #333;
-  padding: 5px 15px;
-  border-radius: 2px;
-  font-weight: bold;
+  background: rgba(239, 68, 68, 0.15);
+  color: #fca5a5;
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-weight: 600;
   cursor: pointer;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  transition: all 0.2s ease;
 }
 
 .review-qty-controls {
   display: flex;
   align-items: center;
   gap: 10px;
-  background-color: #ccc;
-  padding: 2px 5px;
-  border-radius: 2px;
+  background: rgba(168, 85, 247, 0.15);
+  border: 1px solid rgba(192, 132, 252, 0.3);
+  padding: 4px 10px;
+  border-radius: 20px;
   font-weight: bold;
+  color: #ffffff;
 }
 
 .review-qty-controls button {
-  background-color: #bbb;
-  border: 1px solid #333;
-  width: 25px;
-  height: 25px;
-  border-radius: 3px;
-  color: white;
+  background: #2a1542;
+  border: 1px solid #c084fc;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  color: #f3e8ff;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
 }
 
 .btn-modificar {
-  background-color: white; background-color: #1d3557;
-  color: white;
-  border: 1px solid #333;
-  padding: 5px 15px;
-  border-radius: 2px;
-  font-weight: bold;
+  background: linear-gradient(135deg, #a855f7, #7e22ce);
+  color: #ffffff;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-weight: 600;
   cursor: pointer;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 10px rgba(168, 85, 247, 0.3);
+  transition: all 0.2s ease;
 }
 
 .review-rodape-cinza {
@@ -110,46 +122,58 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  background: rgba(13, 6, 20, 0.95);
+  border-top: 1px solid rgba(192, 132, 252, 0.2);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 -10px 25px rgba(0, 0, 0, 0.5);
 }
 
 .review-totais {
-  background-color: #b5c2cd;
-  padding: 5px 20px;
+  background: rgba(168, 85, 247, 0.1);
+  padding: 12px 20px;
   text-align: right;
   font-weight: bold;
-  color: #fff;
+  color: #ffffff;
+  font-size: 1.1rem;
+  border-bottom: 1px solid rgba(192, 132, 252, 0.15);
 }
 
 .review-botoes-finais {
-  background-color: #d3deea;
-  padding: 15px;
+  padding: 16px 20px;
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 12px;
 }
 
 .btn-retornar {
   flex: 1;
-  padding: 10px;
-  border: 1px solid #999;
-  border-radius: 4px;
-  background-color: transparent;
-  color: white; background-color: #900;
+  padding: 12px;
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  border-radius: 10px;
+  background: rgba(239, 68, 68, 0.15);
+  color: #fca5a5;
   font-weight: bold;
   cursor: pointer;
+  transition: all 0.2s ease;
 }
 
 .btn-pagar {
   flex: 1;
-  padding: 10px;
-  border: 1px solid #999;
-  border-radius: 4px;
-  background-color: transparent;
-  color: white; background-color: #1d3557;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #a855f7, #7e22ce);
+  color: #ffffff;
   font-weight: bold;
   cursor: pointer;
+  box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);
+  transition: all 0.2s ease;
 }
 
-.btn-remover:active, .btn-modificar:active, .btn-retornar:active, .btn-pagar:active, .review-qty-controls button:active {
+.btn-remover:active,
+.btn-modificar:active,
+.btn-retornar:active,
+.btn-pagar:active,
+.review-qty-controls button:active {
   transform: scale(0.95);
 }

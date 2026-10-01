@@ -172,7 +172,7 @@ export const produtosDados = [
         id: 304,
         name: 'Suco Tuttifrutti',
         price: 9.0,
-        image: '/img/suco_tuttifrutti.jpeg',
+        image: '/img/suco.jpeg',
         categoryId: 3,
         category: { name: 'Bebidas' },
     },

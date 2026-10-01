@@ -7,8 +7,12 @@
 }
 
 .produto-img {
-  font-size: 3rem;
-  margin-bottom: 10px;
+  height: 180px;
+  display: flex;
+}
+
+.produto-img img {
+  height: 100%;
 }
 
 .quantity-controls {

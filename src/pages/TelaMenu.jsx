@@ -85,7 +85,7 @@ export default function TelaMenu({
         {!variacaoSelecionada && (
           <div className={styles["menu-lateral"]}>
             {!produtoAtivo && categorias.map(categoria => (
-              <CategoriaItem 
+              <CategoriaItem
                 key={categoria.id}
                 categoria={categoria}
                 categoriaSelecionada={categoriaSelecionada}
@@ -102,30 +102,30 @@ export default function TelaMenu({
           {!produtoAtivo ? (
             <div className={styles["produtos-grid"]}>
               {produtos.map(produto => (
-                <ProdutoCard 
-                  key={produto.id} 
-                  produto={produto} 
-                  onClick={() => abrirOpcoes(produto)} 
+                <ProdutoCard
+                  key={produto.id}
+                  produto={produto}
+                  onClick={() => abrirOpcoes(produto)}
                 />
               ))}
             </div>
           ) : !variacaoSelecionada ? (
-            <VariacaoProduto 
-              produtoAtivo={produtoAtivo} 
-              selecionarVariacao={selecionarVariacao} 
-              executarComAtraso={executarComAtraso} 
-              setProdutoAtivo={setProdutoAtivo} 
+            <VariacaoProduto
+              produtoAtivo={produtoAtivo}
+              selecionarVariacao={selecionarVariacao}
+              executarComAtraso={executarComAtraso}
+              setProdutoAtivo={setProdutoAtivo}
             />
           ) : (
-            <QuantidadeProduto 
-              produtoAtivo={produtoAtivo} 
-              variacaoSelecionada={variacaoSelecionada} 
-              quantidade={quantidade} 
-              setQuantidade={setQuantidade} 
-              executarComAtraso={executarComAtraso} 
-              setVariacaoSelecionada={setVariacaoSelecionada} 
-              setProdutoAtivo={setProdutoAtivo} 
-              adicionarAoCarrinho={adicionarAoCarrinho} 
+            <QuantidadeProduto
+              produtoAtivo={produtoAtivo}
+              variacaoSelecionada={variacaoSelecionada}
+              quantidade={quantidade}
+              setQuantidade={setQuantidade}
+              executarComAtraso={executarComAtraso}
+              setVariacaoSelecionada={setVariacaoSelecionada}
+              setProdutoAtivo={setProdutoAtivo}
+              adicionarAoCarrinho={adicionarAoCarrinho}
             />
           )}
         </div>
